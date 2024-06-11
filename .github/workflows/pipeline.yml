@@ -52,5 +52,5 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           subject: "Artefacto de ${{ github.actor }} publicado"
           body: "El artefacto generado por ${{ github.actor }} se ha publicado correctamente."
-          to: ${{secrets.DESTINATARIO}}
+          to: igtrujilloa@gmail.com
           from: ${{ github.actor }}
