@@ -50,6 +50,31 @@ class TestPlantillaWord {
 	        assertEquals(wordDocument.convertTextFileToString("parrafo.txt"), paragraphs.get(2).getText());
 	       
 	    }
+	    /**
+	     * modificar el subtitulo
+	     * @throws Exception
+	     */
+	    @Test
+	    public void whenParsingOutputDocument_thensubtitleArial() throws Exception {
+	        Path msWordPath = Paths.get("Quijote.docx");
+	        logger.info("path ",msWordPath);
+	        XWPFDocument document = new XWPFDocument(Files.newInputStream(msWordPath));
+	        List<XWPFParagraph> paragraphs = document.getParagraphs();
+	        document.close();
+	        assertEquals("Arial", paragraphs.get(1).getRuns().get(0).getFontName());
+	        assertEquals(true, paragraphs.get(1).getRuns().get(0).isBold());
+	       
+	    }
+	    @Test
+	    public void whenParsingOutputDocument_thensubtitleBold() throws Exception {
+	        Path msWordPath = Paths.get("Quijote.docx");
+	        logger.info("path ",msWordPath);
+	        XWPFDocument document = new XWPFDocument(Files.newInputStream(msWordPath));
+	        List<XWPFParagraph> paragraphs = document.getParagraphs();
+	        document.close();
+	        assertEquals(true, paragraphs.get(1).getRuns().get(0).isBold());
+	       
+	    }
 	}
 
 

@@ -71,7 +71,8 @@ public class PlantillaWord {
          XWPFRun subTitleRun = subTitle.createRun();
          subTitleRun.setText(texto);
          subTitleRun.setColor("00CC44");
-         subTitleRun.setFontFamily("Courier");         
+         subTitleRun.setFontFamily("Arial");    
+         subTitleRun.setBold(true);  
          subTitleRun.setFontSize(12);
          subTitleRun.setTextPosition(20);
          subTitleRun.setUnderline(UnderlinePatterns.DOT_DOT_DASH);
